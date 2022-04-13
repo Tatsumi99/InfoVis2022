@@ -1,0 +1,56 @@
+<html>
+    <head>
+	<title>W02: Task 3</title>
+    </head>
+    <body>
+            座標Aを入力してください:<br>
+            x<input type="number" id="v0x">
+            y<input type="number" id="v0y">
+            z<input type="number" id="v0z"><br/>
+            <br/>
+            座標Bを入力してください:<br>
+            x<input type="number" id="v1x">
+            y<input type="number" id="v1y">
+            z<input type="number" id="v1z"><br/>
+            <br/>
+            座標Cのを入力してください:<br>
+            x<input type="number" id="v2x">
+            y<input type="number" id="v2y">
+            z<input type="number" id="v2z"><br/>
+
+        <input type="button" value="三角形の面積を計算" onclick="calctri();">
+	<script src="vec3.js"></script>
+	<script>
+        function calctri(){
+	var x0, y0, z0; // (input vertex 0)
+    var x1, y1, z1; // (input vertex 1)
+    var x2, y2, z2; // (input vertex 2)
+    var v0 = new Vec3( x0, y0, z0 );
+
+    var x0 = document.getElementById('v0x').value; // idが「v0x」のテキストボックスに入力された値を取得して変数x0に代入
+    var y0 = document.getElementById('v0y').value;
+    var z0 = document.getElementById('v0z').value;
+
+    var x1 = document.getElementById('v1x').value; // idが「v1x」のテキストボックスに入力された値を取得して変数x0に代入
+    var y1 = document.getElementById('v1y').value;
+    var z1 = document.getElementById('v1z').value
+
+    var x2 = document.getElementById('v2x').value; // idが「v1x」のテキストボックスに入力された値を取得して変数x0に代入
+    var y2 = document.getElementById('v2y').value;
+    var z2 = document.getElementById('v2z').value
+
+    var v0 = new Vec3( x0, y0, z0 );
+    var v1 = new Vec3( x1, y1, z1 );
+    var v2 = new Vec3( x2, y2, z2 );   
+
+    document.write( "頂点A="+v0.x+","+v0.y+","+v0.z+"<br>");
+    document.write( "頂点B="+v1.x+","+v1.y+","+v1.z+"<br>");
+    document.write( "頂点C="+v2.x+","+v2.y+","+v2.z+"<br>");
+
+    var S = v0.AreaOfTriangle( v0, v1, v2 ); // (output value)
+    
+    document.write( "三角形の面積は"+S+"<br>");
+        }
+	</script>
+    </body>
+</html>

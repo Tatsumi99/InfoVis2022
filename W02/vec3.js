@@ -1,11 +1,13 @@
-Vec3 = function( x, y, z )
+class Vec3{
+
+constructor( x, y, z )
 {
     this.x = x;
     this.y = y;
     this.z = z;
 }
 
-Vec3.prototype.add = function( v )
+add = function( v )
 {
     this.x += v.x;
     this.y += v.y;
@@ -13,7 +15,7 @@ Vec3.prototype.add = function( v )
     return this;
 }
 
-Vec3.prototype.sub = function( v )
+sub = function( v )
 {
     this.x -= v.x;
     this.y -= v.y;
@@ -21,30 +23,30 @@ Vec3.prototype.sub = function( v )
     return this;
 }
 
-Vec3.prototype.sum = function()
+sum = function()
 {
     return this.x + this.y + this.z;
 }
 
-Vec3.prototype.min = function()
+min = function()
 {
     //return Math.min( this.x, this.y, this.z );
     const m =  this.x < this.y ? this.x : this.y;
     return m < this.z ? m : this.z;
 }
 
-Vec3.prototype.max = function()
+max = function()
 {
     //return Math.max( this.x, this.y, this.z );
     const m = this.x > this.y ? this.x : this.y;
-    return m > this.z ? this.z : m;}
+    return m > this.z ?  m:this.z;}
 
-Vec3.prototype.mid = function()
+mid = function()
 {
     return this.sum() - this.min() - this.max();
 }
 
-Vec3.prototype.cross = function( v )
+cross = function( v )
 {
     var x = this.x, y = this.y, z = this.z;
     this.x = y * v.z - z * v.y;
@@ -53,7 +55,22 @@ Vec3.prototype.cross = function( v )
     return this;
 }
 
-Vec3.prototype.length = function()
+length = function(v0,v1)
 {
-    return Math.sqrt( this.x * this.x + this.y * this.y + this.z * this.z );
+    var ans = Math.sqrt( (v0.x - v1.x) * (v0.x - v1.x) + (v0.y - v1.y) * (v0.y - v1.y) + (v0.z - v1.z) * (v0.z - v1.z) );
+    //document.write( ans+"<br>" );
+    return ans
+}
+
+AreaOfTriangle = function(v0,v1,v2)
+{
+    var a = v0.length(v0,v1);
+    var b = v0.length(v0,v2);
+    var c = v0.length(v1,v2);
+
+    var s = (a+b+c)/2;
+    var Area = Math.sqrt(s*(s-a)*(s-b)*(s-c));
+    return Area;
+}
+
 }
