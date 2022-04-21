@@ -1,4 +1,4 @@
-width,padding,height,color
-100,10,20,red
-50,10,20,green
-80,10,20,yellow
+width,color,label
+200,red,"a"
+50,green,"b"
+100,yellow,"c"
