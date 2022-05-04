@@ -6,7 +6,7 @@ d3.csv("https://vizlab-kobe-lecture.github.io/InfoVis2021/W04/data.csv")
             parent: '#drawing_region',
             width: 350,
             height: 256,
-            margin: {top:30, right:30, bottom:30, left:30}
+            margin: {top:40, right:30, bottom:80, left:80}
         };
 
         const scatter_plot = new ScatterPlot( config, data );
@@ -54,7 +54,8 @@ class ScatterPlot {
             .ticks(6);
 
         self.xaxis_group = self.chart.append('g')
-        .attr('transform', `translate(0, ${self.inner_height})`);
+        .attr('transform', `translate(0, ${self.inner_height})`)
+ 
 
         self.yaxis = d3.axisLeft( self.yscale )
             .ticks(6);
@@ -92,10 +93,40 @@ class ScatterPlot {
             .attr("fill", "SkyBlue")
 
 
+
         self.xaxis_group
-            .call( self.xaxis );
+            .call( self.xaxis )
+            .append("text")
+            .attr("fill", "black")
+            .attr("x", 120)
+            .attr("y", 35)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "10pt")
+            .attr("font-weight", "bold")
+            .text("X Label");
 
         self.yaxis_group
-            .call( self.yaxis );
+            .call( self.yaxis )
+            .append("text")
+            .attr("fill", "black")
+            .attr("x", -70)
+            .attr("y", -40)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "10pt")
+            .attr("transform", "rotate(-90)")
+            .attr("font-weight", "bold")
+            .text("Y Label");
+        
+            self.xaxis_group
+            .call( self.xaxis )
+            .append("text")
+            .attr("fill", "black")
+            .attr("x", 120)
+            .attr("y", -150)
+            .attr("text-anchor", "middle")
+            .attr("font-size", "10pt")
+            .attr("font-weight", "bold")
+            .text("Title");
+    
     }
 }
