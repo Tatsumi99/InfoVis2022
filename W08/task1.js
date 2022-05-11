@@ -1,8 +1,25 @@
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W08/task1.csv")
+    .then( data => {
+
+        var config = {
+            parent: '#drawing_region',
+            width: 350,
+            height: 256,
+            margin: {top:30, right:30, bottom:30, left:30}
+        };
+
+        const scatter_plot = new BarChart( config, data );
+        scatter_plot.update();
+    })
+    .catch( error => {
+        console.log( error );
+    });
+
 class BarChart {
 
     constructor( config, data ) {
         this.config = {
-            parent: '#drawing_region',
+            parent: config.parent,
             width: config.width || 256,
             height: config.height || 128,
             margin: config.margin || {top:10, right:10, bottom:20, left:60}
