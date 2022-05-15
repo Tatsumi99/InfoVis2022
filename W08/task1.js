@@ -76,9 +76,11 @@ class BarChart {
         self.xscale.domain( [0, xmax] );
 
         //self.ymin = d3.min( self.data, d => d.value );
-        const ymax = d3.map( self.data, d => d.label );
-        self.yscale.domain( ymax );
-
+       // const ymax = d3.map( self.data, d => d.label );
+        //self.yscale.domain( ymax );
+        self.yscale
+        .domain(self.data.map(d => d.label))
+        .paddingInner(0.1);
         self.render();
     }
 
@@ -93,11 +95,11 @@ class BarChart {
         .call(self.yaxis);
 
 
-            self.chart.selectAll("rect").data(self.data).enter()
+         self.chart.selectAll("rect").data(self.data).enter()
             .append("rect")
             .attr("x", 0)
-            .attr("y", d => self.yscale(d.value))
-            .attr("width", 100)
+            .attr("y", d => self.yscale(d.label))
+            .attr("width",  d => self.xscale(d.value))
             .attr("height", self.yscale.bandwidth());
 
          
