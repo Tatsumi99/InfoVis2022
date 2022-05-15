@@ -28,8 +28,7 @@ class ScatterPlot {
         this.data = data;
         this.init();
     }
-
-    init() {
+     init() {
         let self = this;
 
         self.svg = d3.select( self.config.parent )

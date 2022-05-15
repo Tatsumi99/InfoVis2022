@@ -42,13 +42,13 @@ class BarChart {
             self.inner_height = self.config.height - self.config.margin.top - self.config.margin.bottom;
     
             self.xscale = d3.scaleLinear()
-             .domain([0, d3.max(self.data, d => d.value)])
+            // .domain([0, d3.max(self.data, d => d.value)])
              .range([0, self.inner_width]);
     
             self.yscale = d3.scaleBand()
-             .domain(self.data.map(d => d.label))
+            // .domain(self.data.map(d => d.label))
              .range([0, self.inner_height])
-             .paddingInner(0.1);
+            // .paddingInner(0.1);
     
             // Initialize axes
             self.xaxis = d3.axisBottom( self.xscale )
@@ -59,11 +59,11 @@ class BarChart {
             .tickSizeOuter(0);
 
             // Draw the axis
-            self.xaxis_group = self.chart.append('g')
-            .attr('transform', `translate(0, ${self.inner_height})`)
+           // self.xaxis_group = self.chart.append('g')
+            //.attr('transform', `translate(0, ${self.inner_height})`)
             
 
-            self.yaxis_group = self.chart.append('g')
+            //self.yaxis_group = self.chart.append('g')
             
         }    
 
@@ -72,12 +72,12 @@ class BarChart {
 
         
        // self.xmin = d3.min( self.data, d => d.value );
-        self.xmax = d3.max( self.data, d => d.value );
-        self.xscale.domain( [0, self.xmax] );
+        const xmax = d3.max( self.data, d => d.value );
+        self.xscale.domain( [0, xmax] );
 
         //self.ymin = d3.min( self.data, d => d.value );
-        self.ymax = d3.map( self.data, d => d.label );
-        self.yscale.domain( self.ymax );
+        const ymax = d3.map( self.data, d => d.label );
+        self.yscale.domain( ymax );
 
         self.render();
     }
@@ -85,19 +85,22 @@ class BarChart {
     render() {
         let self = this;
 
-        // Draw bars
+        self.xaxis_group = self.chart.append('g')
+        .attr('transform', `translate(0, ${self.inner_height})`)
+        .call(self.xaxis);
+
+        self.yaxis_group = self.chart.append('g')
+        .call(self.yaxis);
+
+
             self.chart.selectAll("rect").data(self.data).enter()
             .append("rect")
             .attr("x", 0)
-            .attr("y", d => self.yscale(d.label))
-            .attr("width", d => self.xscale(d.value))
+            .attr("y", d => self.yscale(d.value))
+            .attr("width", 100)
             .attr("height", self.yscale.bandwidth());
 
-            self.xaxis_group
-            .call( self.xaxis );
-
-            self.yaxis_group
-            .call( self.yaxis );
+         
 
 
     }
