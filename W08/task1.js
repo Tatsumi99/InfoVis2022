@@ -42,20 +42,21 @@ class BarChart {
             self.inner_height = self.config.height - self.config.margin.top - self.config.margin.bottom;
     
             self.xscale = d3.scaleLinear()
-            // .domain([0, d3.max(self.data, d => d.value)])
+             .domain([0, d3.max(self.data, d => d.value)])
              .range([0, self.inner_width]);
     
             self.yscale = d3.scaleBand()
-            // .domain(self.data.map(d => d.label))
+             .domain(self.data.map(d => d.label))
              .range([0, self.inner_height]);
-            // .paddingInner(0.1);
+            
     
             // Initialize axes
             self.xaxis = d3.axisBottom( self.xscale )
-             .ticks(5)
+            .ticks(5)
             .tickSizeOuter(0);
 
             self.yaxis = d3.axisLeft( self.yscale )
+            .ticks(5)
             .tickSizeOuter(0);
 
             // Draw the axis
@@ -70,16 +71,10 @@ class BarChart {
     update() {
         let self = this;
 
-        
-       // self.xmin = d3.min( self.data, d => d.value );
         const xmax = d3.max( self.data, d => d.value );
         self.xscale.domain( [0, xmax] );
 
-        //self.ymin = d3.min( self.data, d => d.value );
-       // const ymax = d3.map( self.data, d => d.label );
-        //self.yscale.domain( ymax );
-        self.yscale
-        .domain(self.data.map(d => d.label))
+        self.yscale.domain(self.data.map(d => d.label))
         .paddingInner(0.1);
         self.render();
     }

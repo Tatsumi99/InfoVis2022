@@ -1,4 +1,4 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W08/task1data.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W08/task3.csv")
     .then( data => {
         data.forEach( d => { d.value = +d.value;});
 
@@ -83,14 +83,6 @@ class PieChart {
     update() {
         let self = this;
 
-        
-        //const xmax = d3.max(self.data, d => d.x);
-       // const ymax = d3.max(self.data, d => d.y);
-
-       // self.xscale
-          //  .domain([0, xmax]);
-      //  self.yscale
-          //  .domain([0, ymax]);
 
         self.arc.innerRadius(self.config.innerradius);
         self.chart.selectAll("path").remove();
@@ -110,7 +102,7 @@ class PieChart {
         self.pieChart
         .append('path')
         .attr('d', self.arc)
-        .attr('fill', 'black')
+        .attr('fill', d => d.data.color)
         .attr('stroke', 'white')
         .attr('stroke-width', 2)
         .attr('transform', `translate(${self.inner_width / 2}, ${self.inner_height / 2})`)
