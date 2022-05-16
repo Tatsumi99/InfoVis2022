@@ -56,37 +56,25 @@ class PieChart {
     
             // Initialize axes
             self.xaxis = d3.axisBottom( self.xscale )
-             .ticks(5)
-            .tickSize(4)
-            .tickPadding(8)
-            .tickSizeOuter(0);
+             .ticks(5);
 
             self.yaxis = d3.axisLeft( self.yscale )
-            .ticks(5)
-            .tickSize(4)
-            .tickPadding(8)
-            .tickSizeOuter(0);
+            .ticks(5);
             
             self.pie = d3.pie()
             .value(d => d.value);
             // Draw the axis
-           // self.xaxis_group = self.chart.append('g')
-            //.attr('transform', `translate(0, ${self.inner_height})`)
+           
             self.arc = d3.arc()
             .innerRadius(self.config.innerradius)
-            .outerRadius(Math.min(self.inner_height, self.inner_width) / 2.2);
+            .outerRadius(Math.min(self.inner_width,self.inner_height, ) / 2);
 
-            //self.yaxis_group = self.chart.append('g')
             
         }    
 
     update() {
         let self = this;
-
-
-        self.arc.innerRadius(self.config.innerradius);
-        self.chart.selectAll("path").remove();
-        self.chart.selectAll("text").remove();
+       // self.arc.innerRadius(self.config.innerradius);
         self.render();
     }
 
@@ -98,7 +86,7 @@ class PieChart {
         .enter()
         .append('g')
 
-    // Draw Pie
+   
         self.pieChart
         .append('path')
         .attr('d', self.arc)
@@ -108,17 +96,14 @@ class PieChart {
         .attr('transform', `translate(${self.inner_width / 2}, ${self.inner_height / 2})`)
 
 
-        const px_label = 15;
         self.pieChart
             .append('text')
             .attr('transform', d => `translate(${self.arc.centroid(d)[0] + self.inner_width / 2}, ${self.arc.centroid(d)[1] + self.inner_height / 2})`)
-            .attr('dy', '.35em')
+            .attr('dy', '.10px')
             .style('text-anchor', 'middle')
             .attr('fill', 'white')
-            .attr('font-size', px_label)
-            .attr('font-weight', 'bold')
+            .attr('font', '15px')
             .attr("stroke", "white")
-            .attr("stroke-width", 0.3)
             .text(d => d.data.label);
 
     }
