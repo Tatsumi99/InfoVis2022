@@ -47,7 +47,7 @@ class BarChart {
     
             self.yscale = d3.scaleBand()
             // .domain(self.data.map(d => d.label))
-             .range([0, self.inner_height])
+             .range([0, self.inner_height]);
             // .paddingInner(0.1);
     
             // Initialize axes
