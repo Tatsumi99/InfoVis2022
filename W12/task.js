@@ -1,4 +1,4 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/Book.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/Book2.csv")
     .then( data => {
         data.forEach( d => { d.Height = +d.Height;});
 
@@ -133,7 +133,7 @@ class BarChart {
             
             d3.select('#blue')
             .on('click', d => {
-                self.chart.selectAll('rect').attr('fill','blue');
+                self.chart.selectAll('rect').attr('fill','skyblue');
             });
     }
 }

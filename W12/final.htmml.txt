@@ -1,0 +1,1 @@
+<a href="http://www.yahoo.co.jp/" target="_blank">Yahooにジャンプ！</a>
