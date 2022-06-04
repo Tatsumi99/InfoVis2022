@@ -1,12 +1,12 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/taskdata.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/Book.csv")
     .then( data => {
         data.forEach( d => { d.Height = +d.Height;});
 
         var config = {
             parent: '#drawing_region',
             width: 512,
-            height: 256,
-            margin: {top:10, right:10, bottom:20, left:60}
+            height: 10000,
+            margin: {top:10, right:10, bottom:20, left:100}
         };
 
         const Barplot = new BarChart( config, data );
