@@ -1,6 +1,6 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/Heroes.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/taskdata.csv")
     .then( data => {
-        data.forEach( d => { d.Height = +d.Height;});
+        data.forEach( d => { d.Height = +d.Height;d.Weight =+d.Weight});
 
         var config = {
             parent: '#drawing_region',
