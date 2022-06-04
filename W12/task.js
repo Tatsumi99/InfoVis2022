@@ -1,12 +1,12 @@
 d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/taskdata.csv")
     .then( data => {
-        data.forEach( d => { d.Height = +d.Height;d.Weight =+d.Weight});
+        data.forEach( d => { d.Height = +d.Height;});
 
         var config = {
             parent: '#drawing_region',
-            width: 1024,
-            height: 512,
-            margin: {top:10, right:10, bottom:20, left:150}
+            width: 512,
+            height: 256,
+            margin: {top:10, right:10, bottom:20, left:60}
         };
 
         const Barplot = new BarChart( config, data );
@@ -99,7 +99,7 @@ class BarChart {
             .transition().duration(1000)
             .attr("x", 0)
             .attr("y", d => self.yscale(d.name))
-            .attr("width",  d => self.xscale(d.name))
+            .attr("width",  d => self.xscale(d.Height))
             .attr("height", self.yscale.bandwidth());
 
         d3.select('#reverse')
