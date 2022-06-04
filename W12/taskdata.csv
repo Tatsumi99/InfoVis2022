@@ -1,4 +1,4 @@
-﻿name,Height,Weight
-"A-Bomb",203,441
-"Abe Sapien",191,65
-"Abin Sur",185,90
+﻿Height,Weight,name
+203,441,"A-Bomb"
+191,65,"Abe Sapien"
+185,90,"Abin Sur"

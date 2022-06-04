@@ -5,7 +5,7 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/taskdata.csv")
         var config = {
             parent: '#drawing_region',
             width: 1024,
-            height: 10000,
+            height: 512,
             margin: {top:10, right:10, bottom:20, left:150}
         };
 
