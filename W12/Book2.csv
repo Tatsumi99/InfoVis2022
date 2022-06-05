@@ -1,11 +1,8 @@
-﻿Height,Weight,Gender,name
-203,441,Male,A-Bomb
+﻿203,441,Male,A-Bomb
 191,65,Male,Abe Sapien
 185,90,Male,Abin Sur
 203,441,Male,Abomination
-0,0,Male,Abraxas
 193,122,Male,Absorbing Man
-0,0,Male,Adam Monroe
 185,88,Male,Adam Strange
 173,61,Female,Agent 13
 178,81,Male,Agent Bob
@@ -13,28 +10,19 @@
 188,108,Male,Air-Walker
 193,90,Male,Ajax
 180,90,Male,Alan Scott
-0,0,Male,Alex Mercer
-0,0,Male,Alex Woolsly
 178,72,Male,Alfred Pennyworth
 244,169,Male,Alien
-0,0,Male,Allan Quatermain
 257,173,Male,Amazo
 188,101,Male,Ammo
-0,0,Male,Ando Masahashi
 183,68,Male,Angel
-0,0,Male,Angel
 165,57,Female,Angel Dust
 163,54,Female,Angel Salvadore
-0,0,Female,Angela
 183,83,Male,Animal Man
 180,90,Male,Annihilus
 211,122,Male,Ant-Man
 183,86,Male,Ant-Man II
-61,0,Male,Anti-Monitor
-0,0,Male,Anti-Spawn
 229,358,Male,Anti-Venom
 213,135,Male,Apocalypse
-0,0,Male,Aquababy
 178,106,Male,Aqualad
 185,146,Male,Aquaman
 175,63,Female,Arachne
@@ -44,62 +32,37 @@
 185,270,Male,Ares
 165,59,Female,Ariel
 163,50,Female,Armor
-0,0,Male,Arsenal
-0,0,Male,Astro Boy
 183,101,Male,Atlas
 198,126,Male,Atlas
 178,68,Male,Atom
-0,0,Male,Atom
 168,54,Female,Atom Girl
 183,81,Male,Atom II
-0,0,Male,Atom III
-0,72,Male,Atom IV
 180,63,Female,Aurora
 183,67,Male,Azazel
-0,0,Male,Azrael
-0,0,Male,Aztar
 203,180,Male,Bane
 183,77,Male,Banshee
 165,54,Male,Bantam
-0,0,Female,Batgirl
 170,57,Female,Batgirl
-0,0,Female,Batgirl III
 165,52,Female,Batgirl IV
-0,0,Female,Batgirl V
 168,61,Female,Batgirl VI
 188,95,Male,Batman
 178,77,Male,Batman
 178,79,Male,Batman II
 198,133,Male,Battlestar
-178,0,Female,Batwoman V
 175,63,Male,Beak
 180,181,Male,Beast
 173,68,Male,Beast Boy
-0,0,Male,Beetle
-0,0,Male,Ben 10
 201,216,Male,Beta Ray Bill
-0,0,Male,Beyonder
 188,135,Female,Big Barda
-0,0,Male,Big Daddy
 165,71,Male,Big Man
-0,0,Male,Bill Harken
-0,0,Male,Billy Kincaid
 180,54,Female,Binary
-0,0,Female,Bionic Woman
-0,0,-,Bird-Brain
-0,0,Male,Bird-Man
-0,0,Male,Bird-Man II
-0,0,Male,Birdman
 198,124,Male,Bishop
 191,155,Male,Bizarro
-0,0,Male,Black Abbott
 191,113,Male,Black Adam
 188,95,Male,Black Bolt
 165,58,Female,Black Canary
 170,59,Female,Black Canary
 178,54,Female,Black Cat
-0,0,Male,Black Flash
-0,0,Male,Black Goliath
 183,86,Male,Black Knight III
 185,90,Male,Black Lightning
 170,52,Female,Black Mamba
@@ -111,104 +74,61 @@
 185,86,Male,Blackwing
 188,88,Male,Blackwulf
 188,97,Male,Blade
-0,0,-,Blaquesmith
 168,68,Female,Bling!
 165,56,Female,Blink
-0,0,Male,Blizzard
-0,0,Male,Blizzard
 175,77,Male,Blizzard II
 178,230,Male,Blob
 218,495,Female,Bloodaxe
-0,0,Male,Bloodhawk
-30.5,0,Male,Bloodwraith
-0,0,Male,Blue Beetle
-0,0,Male,Blue Beetle
 183,86,Male,Blue Beetle II
-0,0,Male,Blue Beetle III
-183,0,Male,Boba Fett
-0,0,Male,Bolt
-0,0,Female,Bomb Queen
 165,55,Female,Boom-Boom
-0,0,Female,Boomer
 196,97,Male,Booster Gold
-0,0,Male,Box
 193,110,-,Box III
-0,0,-,Box IV
 198,135,Male,Brainiac
 170,61,Male,Brainiac 5
 183,99,Male,Brother Voodoo
-193,0,Male,Brundlefly
 157,52,Female,Buffy
 183,90,Male,Bullseye
 170,59,Female,Bumblebee
-0,0,Male,Bumbleboy
-0,0,Male,Bushido
 203,158,Male,Cable
 175,74,Female,Callisto
-0,0,Male,Cameron Hicks
 183,81,Male,Cannonball
 188,108,Male,Captain America
 193,90,Male,Captain Atom
 198,116,Male,Captain Britain
-0,0,Male,Captain Cold
-188,0,Male,Captain Epic
-0,0,Male,Captain Hindsight
 188,108,Male,Captain Mar-vell
 180,74,Female,Captain Marvel
 193,101,Male,Captain Marvel
 175,74,Male,Captain Marvel II
-0,0,Male,Captain Midnight
-0,0,Male,Captain Planet
-0,0,-,Captain Universe
 185,86,Male,Carnage
 173,61,Female,Cat
-0,0,Female,Cat II
 175,61,Female,Catwoman
 170,62,-,Cecilia Reyes
 201,97,Male,Century
-0,0,Female,Cerebra
 175,63,Male,Chamber
-0,0,Male,Chameleon
 180,81,Male,Changeling
 163,50,Female,Cheetah
 170,55,Female,Cheetah II
 175,54,Female,Cheetah III
 185,86,Male,Chromos
-178,0,Male,Chuck Norris
 183,170,Male,Citizen Steel
-0,0,Female,Claire Bennet
-0,0,-,Clea
 226,70,Male,Cloak
 178,78,Male,Clock King
-0,0,Male,Cogliostro
-0,0,Male,Colin Wagner
-0,0,Male,Colossal Boy
 226,225,Male,Colossus
 183,67,Female,Copycat
 191,79,Male,Corsair
 183,99,Male,Cottonmouth
-0,0,Male,Crimson Crusader
 180,104,Male,Crimson Dynamo
 168,50,Female,Crystal
-0,0,Male,Curse
-0,0,Male,Cy-Gor
 198,173,Male,Cyborg
-0,0,Male,Cyborg Superman
 191,88,Male,Cyclops
 175,68,-,Cypher
 165,52,Female,Dagger
-0,0,Male,Danny Cooper
-0,0,Female,Daphne Powell
 183,90,Male,Daredevil
 185,81,Male,Darkhawk
-0,0,Male,Darkman
 267,817,Male,Darkseid
-0,0,-,Darkside
 168,56,Female,Darkstar
-170,0,Male,Darth Maul
 198,135,Male,Darth Vader
 122,27,Male,Dash
-0,0,Male,Data
 173,52,Female,Dazzler
 183,90,Male,Deadman
 188,95,Male,Deadpool
@@ -218,7 +138,6 @@
 185,95,Male,Demogoblin
 188,383,Male,Destroyer
 193,90,Male,Diamondback
-0,0,Male,DL Hawkins
 198,171,Male,Doc Samson
 201,187,Male,Doctor Doom
 201,132,Male,Doctor Doom II
@@ -226,43 +145,29 @@
 175,110,Male,Doctor Octopus
 188,81,Male,Doctor Strange
 173,54,Female,Domino
-0,0,Male,Donatello
 175,63,Female,Donna Troy
 244,412,Male,Doomsday
 196,104,Male,Doppelganger
-185,0,Male,Dormammu
-0,0,Male,Dr Manhattan
 193,306,Male,Drax the Destroyer
-0,0,-,Ego
 168,56,Female,Elastigirl
 180,74,Male,Electro
 175,59,Female,Elektra
-0,0,Female,Elle Bishop
 185,80,Male,Elongated Man
 178,65,Female,Emma Frost
 168,57,Female,Enchantress
-0,0,Female,Energy
-0,0,Male,ERG-1
-168,0,Male,Ethan Hunt
 193,203,Male,Etrigan
 188,95,Male,Evil Deadpool
 191,106,Male,Evilhawk
 183,88,Male,Exodus
 196,96,-,Fabian Cortez
 188,108,Male,Falcon
-0,0,Male,Fallen One II
-0,0,Female,Faora
 175,50,-,Feral
-0,0,Female,Fighting Spirit
 975,18,Male,Fin Fang Foom
 165,56,Female,Firebird
 193,99,-,Firelord
 173,56,Female,Firestar
-0,0,Male,Firestorm
 188,91,Male,Firestorm
-0,0,-,Fixer
 180,81,Male,Flash
-0,0,Male,Flash Gordon
 183,88,Male,Flash II
 183,86,Male,Flash III
 157,52,Male,Flash IV
@@ -274,41 +179,26 @@
 876,16,Male,Galactus
 185,81,Male,Gambit
 183,77,Female,Gamora
-0,0,Male,Garbage Man
-0,0,Male,Gary Bell
-0,0,Male,General Zod
 185,86,Male,Genesis
 188,99,Male,Ghost Rider
-0,0,-,Ghost Rider II
-0,0,Male,Giant-Man
-0,0,Male,Giant-Man II
 62.5,630,Female,Giganta
 198,268,Male,Gladiator
 168,50,Female,Goblin Queen
-108,0,-,Godzilla
-0,0,Male,Gog
 175,62,Male,Goku
-0,0,Male,Goliath
-0,0,Male,Goliath
-0,0,Male,Goliath
 183,90,Male,Goliath IV
 198,270,Male,Gorilla Grodd
 178,115,Female,Granny Goodness
 178,79,Male,Gravity
-170,0,Male,Greedo
 188,88,Male,Green Arrow
 180,83,Male,Green Goblin
 178,77,Male,Green Goblin II
 183,88,Male,Green Goblin III
 178,79,Male,Green Goblin IV
 701,4,Male,Groot
-0,0,Male,Guardian
 188,95,Male,Guy Gardner
 188,90,Male,Hal Jordan
 183,79,Male,Han Solo
-188,0,Male,Hancock
 170,63,Female,Harley Quinn
-0,0,Male,Harry Potter
 183,79,Male,Havok
 185,89,Male,Hawk
 191,104,Male,Hawkeye
@@ -316,7 +206,6 @@
 175,61,Female,Hawkgirl
 185,88,Male,Hawkman
 175,54,Female,Hawkwoman
-0,0,Female,Hawkwoman II
 170,65,Female,Hawkwoman III
 180,81,Male,Heat Wave
 213,225,Female,Hela
@@ -324,10 +213,7 @@
 173,61,Female,Hellcat
 185,81,Male,Hellstorm
 196,146,Male,Hercules
-0,0,Male,Hiro Nakamura
-0,0,Female,Hit-Girl
 180,83,Male,Hobgoblin
-170,0,Female,Hollow
 168,48,Female,Hope Summers
 79,18,Male,Howard the Duck
 244,630,Male,Hulk
@@ -340,93 +226,51 @@
 173,65,Male,Iceman
 170,65,Male,Impulse
 183,79,Male,Indiana Jones
-0,0,Female,Indigo
 180,81,Male,Ink
 168,54,Female,Invisible Woman
 180,79,Male,Iron Fist
 198,191,Male,Iron Man
-0,2,Male,Iron Monger
-0,0,Female,Isis
-0,0,Male,Jack Bauer
 155,79,Male,Jack of Hearts
 71,14,Male,Jack-Jack
-183,0,Male,James Bond
 178,77,Male,James T. Kirk
-193,0,Male,Jar Jar Binks
-0,0,Male,Jason Bourne
 168,52,Female,Jean Grey
-0,0,Male,Jean-Luc Picard
 168,55,Female,Jennifer Kale
-0,0,Female,Jesse Quick
-0,0,Female,Jessica Cruz
 170,56,Female,Jessica Jones
-0,0,Female,Jessica Sanders
 188,113,Male,Jigsaw
-0,0,Male,Jim Powell
-0,0,Male,JJ Powell
-0,0,Male,Johann Krauss
-183,0,Male,John Constantine
 185,90,Male,John Stewart
 183,88,Male,John Wraith
 196,86,Male,Joker
 165,49,Female,Jolt
 165,52,Female,Jubilee
-188,0,Male,Judge Dredd
 287,855,Male,Juggernaut
-0,0,Male,Junkpile
 178,81,Male,Justice
-0,0,Female,Jyn Erso
-213,0,Male,K-2SO
 191,104,Male,Kang
 173,72,Male,Karate Kid
-0,0,Female,Kathryn Janeway
-0,0,Female,Katniss Everdeen
-0,0,Male,Kevin 11
-0,0,Male,Kick-Ass
-0,0,Male,Kid Flash
-0,0,Male,Kid Flash II
 244,356,Male,Killer Croc
-0,0,Female,Killer Frost
 234,324,Male,Kilowog
-30.5,0,Male,King Kong
-0,0,Male,King Shark
 201,203,Male,Kingpin
 188,97,Male,Klaw
-0,0,Male,Kool-Aid Man
 191,99,Male,Kraven II
 183,106,Male,Kraven the Hunter
 64,18,Male,Krypto
 180,79,Male,Kyle Rayner
-0,0,Male,Kylo Ren
-0,0,Female,Lady Bullseye
 175,58,Female,Lady Deathstrike
 178,63,Male,Leader
-0,0,Male,Leech
 175,59,Male,Legion
-0,0,Male,Leonardo
 188,95,Male,Lex Luthor
 165,54,Female,Light Lass
 155,65,Male,Lightning Lad
 191,95,Male,Lightning Lord
 198,360,-,Living Brain
-0,0,-,Living Tribunal
-0,0,Female,Liz Sherman
 203,230,Male,Lizard
 229,288,Male,Lobo
 193,236,Male,Loki
 188,36,Male,Longshot
 198,191,Male,Luke Cage
-0,0,Male,Luke Campbell
 168,77,Male,Luke Skywalker
-0,0,Female,Luna
-0,0,Female,Lyja
 180,79,Male,Mach-IV
 183,383,-,Machine Man
 188,86,Male,Magneto
-0,0,Male,Magog
-183,0,Male,Magus
-0,0,-,Man of Miracles
-0,0,Male,Man-Bat
 213,225,Male,Man-Thing
 188,90,Male,Man-Wolf
 188,97,Male,Mandarin
@@ -434,41 +278,25 @@
 201,135,Male,Martian Manhunter
 170,56,Female,Marvel Girl
 183,81,Male,Master Brood
-213,0,Male,Master Chief
-0,0,Male,Match
-0,0,Male,Matt Parkman
 193,110,Male,Maverick
 180,72,Female,Maxima
-0,0,Female,Maya Herrera
 180,59,Female,Medusa
 165,54,Female,Meltdown
 198,140,Male,Mephisto
 175,72,Female,Mera
 196,90,Male,Metallo
 185,90,Male,Metamorpho
-0,0,Female,Meteorite
 185,86,Male,Metron
-0,0,Male,Micah Sanders
-0,0,Male,Michelangelo
 183,77,Male,Micro Lad
 188,101,Male,Mimic
-0,0,Female,Minna Murray
-0,0,Female,Misfit
 178,61,Female,Miss Martian
 185,81,Male,Mister Fantastic
 183,86,Male,Mister Freeze
-0,0,Male,Mister Knife
-0,0,Male,Mister Mxyzptlk
 196,128,Male,Mister Sinister
-0,0,Male,Mister Zsasz
 175,61,Female,Mockingbird
 366,338,Male,MODOK
-0,0,Male,Mogo
-0,0,Male,Mohinder Suresh
-0,0,Male,Moloch
 196,248,Male,Molten Man
 193,90,Male,Monarch
-0,0,Female,Monica Dawson
 188,101,Male,Moon Knight
 180,59,Female,Moonstone
 188,79,Male,Morlun
@@ -480,93 +308,62 @@
 180,70,Male,Multiple Man
 180,79,Male,Mysterio
 178,54,Female,Mystique
-0,0,Male,Namor
 188,125,Male,Namor
 180,85,Female,Namora
 168,101,Female,Namorita
 168,54,Male,Naruto Uzumaki
-0,0,Male,Nathan Petrelli
 185,83,Female,Nebula
-0,0,Female,Negasonic Teenage Warhead
 185,99,Male,Nick Fury
 175,88,Male,Nightcrawler
 178,79,Male,Nightwing
-0,0,Female,Niki Sanders
-0,0,Female,Nina Theroux
-0,0,Male,Nite Owl II
 180,83,Male,Northstar
 185,86,Male,Nova
 163,59,Female,Nova
 206,293,Male,Odin
-0,0,Male,Offspring
 211,191,Male,Omega Red
 180,65,Male,Omniscient
 175,69,Male,One Punch Man
-0,0,-,One-Above-All
 305,405,Male,Onslaught
 178,59,Female,Oracle
-0,0,Male,Osiris
-0,0,Male,Overtkill
-0,0,Male,Ozymandias
-0,0,-,Parademon
 170,117,Male,Paul Blart
-0,0,-,Penance
-0,0,Female,Penance I
 183,89,Male,Penance II
 157,79,Male,Penguin
-0,0,Male,Peter Petrelli
-0,0,Male,Phantom
 168,54,Female,Phantom Girl
 168,52,Female,Phoenix
 183,87,Male,Plantman
-0,0,Male,Plastic Lad
 185,80,Male,Plastic Man
 168,55,Female,Plastique
 168,50,Female,Poison Ivy
 170,52,Female,Polaris
 180,81,Female,Power Girl
-0,0,Male,Power Man
 213,234,Male,Predator
 183,86,Male,Professor X
 180,81,Male,Professor Zoom
-0,0,Male,Proto-Goblin
 180,70,Female,Psylocke
 183,90,Male,Punisher
 180,74,Male,Purple Man
 178,68,Male,Pyro
-0,0,Male,Q
-0,0,Male,Quantum
 188,83,Male,Question
 183,79,Male,Quicksilver
 163,56,Male,Quill
 193,97,Male,Ra's Al Ghul
-0,0,Female,Rachel Pirzad
 178,83,Male,Rambo
-0,0,Male,Raphael
 165,50,Female,Raven
 178,70,Male,Ray
 191,117,Male,Razor-Fist II
 180,83,Male,Red Arrow
 183,81,Male,Red Hood
 213,630,Male,Red Hulk
-0,0,Male,Red Mist
 165,56,Male,Red Robin
 188,108,Male,Red Skull
 185,146,Male,Red Tornado
-0,0,Male,Redeemer II
-0,0,Male,Redeemer III
-0,0,Female,Renata Soliz
-297,0,Female,Rey
 196,320,Male,Rhino
 185,85,Male,Rick Flag
-0,0,Male,Riddler
-0,0,Male,Rip Hunter
 180,72,Female,Ripcord
 178,79,Male,Robin
 183,101,Male,Robin II
 165,56,Male,Robin III
 137,38,Male,Robin V
-0,0,Female,Robin VI
 122,25,Male,Rocket Raccoon
 173,54,Female,Rogue
 191,104,Male,Ronin
@@ -575,15 +372,11 @@
 170,61,Female,Sage
 185,203,Male,Sandman
 305,900,Male,Sasquatch
-279,0,Male,Sauron
-0,0,Male,Savage Dragon
 183,63,Male,Scarecrow
 178,74,Male,Scarlet Spider
 193,113,Male,Scarlet Spider II
 170,59,Female,Scarlet Witch
-0,0,Female,Scorpia
 211,310,Male,Scorpion
-0,0,Male,Sebastian Shaw
 188,87,Male,Sentry
 185,149,-,Shadow King
 173,54,Female,Shadow Lass
@@ -594,89 +387,61 @@
 183,153,Female,She-Thing
 175,79,Male,Shocker
 173,52,Female,Shriek
-0,0,Female,Shrinking Violet
 188,191,Female,Sif
-0,0,Female,Silk
-0,0,Female,Silk Spectre
-0,0,Female,Silk Spectre II
 193,101,Male,Silver Surfer
 157,50,Female,Silverclaw
-0,0,Male,Simon Baz
 201,92,Male,Sinestro
 175,72,Female,Siren
-0,0,Female,Siren II
 168,52,Female,Siryn
 198,180,Male,Skaar
-0,0,Male,Snake-Eyes
 178,49,Female,Snowbird
-0,0,Male,Sobek
 279,437,Male,Solomon Grundy
 165,65,Female,Songbird
 188,113,Male,Space Ghost
 211,405,Male,Spawn
-0,0,Male,Spectre
-0,0,Male,Speedball
-0,0,Male,Speedy
-0,0,Female,Speedy
-0,0,Male,Spider-Carnage
 170,54,Female,Spider-Girl
 165,56,Female,Spider-Gwen
 178,74,Male,Spider-Man
 178,77,-,Spider-Man
 157,56,Male,Spider-Man
 178,59,Female,Spider-Woman
-0,0,Female,Spider-Woman II
 173,55,Female,Spider-Woman III
 178,58,Female,Spider-Woman IV
 185,81,Male,Spock
 183,83,Male,Spyke
-0,0,Female,Stacy X
 188,79,Male,Star-Lord
-0,0,Male,Stardust
 193,71,Female,Starfire
 165,62,Female,Stargirl
 170,63,Male,Static
 201,131,Male,Steel
-0,0,Female,Stephanie Powell
 183,91,Male,Steppenwolf
 180,57,Female,Storm
-183,0,Male,Stormtrooper
 173,77,Male,Sunspot
 170,68,Male,Superboy
 180,77,Male,Superboy-Prime
 165,54,Female,Supergirl
 191,101,Male,Superman
-0,0,Male,Swamp Thing
 196,47,Male,Swarm
-0,0,Male,Sylar
 180,74,Male,Synch
 183,146,Male,T-1000
-0,176,Male,T-800
-0,198,Male,T-850
-0,149,Female,T-X
 188,99,Male,Taskmaster
 163,54,Female,Tempest
 201,443,Male,Thanos
-0,0,Male,The Cape
 188,101,Male,The Comedian
 183,225,Male,Thing
 198,288,Male,Thor
 175,143,Female,Thor Girl
 185,101,Male,Thunderbird
-0,0,Male,Thunderbird II
 175,74,Male,Thunderbird III
 198,288,Male,Thunderstrike
 218,158,Female,Thundra
 185,203,Male,Tiger Shark
 178,81,Female,Tigra
 163,54,Male,Tinkerer
-0,0,Male,Titan
 175,76,Male,Toad
 188,97,Male,Toxin
 191,117,Male,Toxin
-0,0,Female,Tracy Strauss
 183,81,Male,Trickster
-0,0,Male,Trigon
 168,59,Female,Triplicate Girl
 188,86,Male,Triton
 183,82,Male,Two-Face
@@ -691,17 +456,13 @@
 191,117,Male,Venom
 175,50,Male,Venom II
 229,334,Male,Venom III
-226,0,Male,Venompool
 168,52,Female,Vertigo II
 178,71,Male,Vibe
 165,54,Female,Vindicator
-0,0,Male,Vindicator
-0,0,Male,Violator
 137,41,Female,Violet Parr
 191,135,Male,Vision
 191,135,-,Vision II
 175,63,Female,Vixen
-0,0,Male,Vulcan
 180,79,Male,Vulture
 183,162,Male,Walrus
 185,95,Male,War Machine
@@ -710,11 +471,7 @@
 173,67,Male,Warp
 218,158,Male,Warpath
 163,50,Female,Wasp
-0,0,Male,Watcher
-0,0,Male,Weapon XI
-0,0,Female,White Canary
 178,65,Female,White Queen
-0,0,Male,Wildfire
 175,117,Male,Winter Soldier
 140,39,-,Wiz Kid
 366,473,Female,Wolfsbane
@@ -722,14 +479,12 @@
 165,51,Female,Wonder Girl
 188,171,Male,Wonder Man
 183,74,Female,Wonder Woman
-0,0,Female,Wondra
 196,117,Male,Wyatt Wingfoot
 155,50,Female,X-23
 175,61,Male,X-Man
 188,95,Male,Yellow Claw
 183,83,Male,Yellowjacket
 165,52,Female,Yellowjacket II
-304.8,0,Male,Ymir
 66,17,Male,Yoda
 170,57,Female,Zatanna
 185,81,Male,Zoom
