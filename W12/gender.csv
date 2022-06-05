@@ -1,4 +1,4 @@
-value,gender
-505,Male
-200,Female
-29,Unknown
+value,gender,color
+505,Male,skyblue
+200,Female,pink
+29,Unknown,purple

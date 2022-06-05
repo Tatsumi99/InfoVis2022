@@ -90,7 +90,7 @@ class PieChart {
         self.pieChart
         .append('path')
         .attr('d', self.arc)
-        .attr('fill', d => d.data.color)
+        .attr('fill', "skyblue")
         .attr('stroke', 'white')
         .attr('stroke-width', 2)
         .attr('transform', `translate(${self.inner_width / 2}, ${self.inner_height / 2})`)
@@ -104,7 +104,7 @@ class PieChart {
             .attr('fill', 'white')
             .attr('font', '15px')
             .attr("stroke", "white")
-            .text(d => d.data.label);
+            .text(d => d.data.gender);
 
     }
 }
