@@ -1,4 +1,4 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/bbl.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
 .then(data=>{
   data.forEach( d => { d.val = +d.val;});
 
@@ -95,7 +95,7 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/bbl.csv")
       bubbles.append("text")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "top")
-      .text(function(d){ return d.data.name ; }+"aaa")
+      .text(function(d){ return d.data.name ; })
       .style("font-size", "12pt")
       .attr("font-weight", "bold")
       ;
