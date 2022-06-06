@@ -73,5 +73,5 @@ bubbles.append("text")
 .attr("text-anchor", "middle")
 .attr("dominant-baseline", "central")
 .text(function(d){ return d.data.name ; })
-.style("font-size", function(d){ return font_scale(d.r) ; })
+.style("font-size", "10pt")
 ;

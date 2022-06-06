@@ -58,7 +58,7 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/bbl.csv")
     var max_val = d3.max(self.no_root_bubble, function(d){ return d.r ;});     
     var min_val = d3.min(self.no_root_bubble, function(d){return d.r ; });
 
-  var color_scale = d3.scaleLinear()
+  self.color_scale = d3.scaleLinear()
   .domain( [min_val, max_val] )
   .range(d3.schemeCategory10 );
 
@@ -81,16 +81,25 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/bbl.csv")
       .attr("transform", function(d){ return "translate("+d.x+","+d.y+")" ;})
       ;
       
+      
+
       bubbles.append("circle")
+      .transition().duration(500)
+      .delay((d,i)=>i*100) 
       .attr("r", function(d){ return d.r })
-      .style("fill", "skyblue");                  
+      .transition().duration(500)
+      .style("fill", function(d,i){ 
+        return self.color_scale(d.r); 
+      })                
       ; 
       bubbles.append("text")
       .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "central")
-      .text(function(d){ return d.data.name ; })
-      .style("font-size", function(d){ return self.font_scale(d.r) ; })
+      .attr("dominant-baseline", "top")
+      .text(function(d){ return d.data.name ; }+"aaa")
+      .style("font-size", "12pt")
+      .attr("font-weight", "bold")
       ;
+      
     }
   }
 
