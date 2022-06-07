@@ -4,8 +4,8 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
 
   var config = {
     parent: '#content',
-    width: 600,
-    height: 300,
+    width: 3000,
+    height: 3000,
     margin: {top:10, right:10, bottom:20, left:20}
 };
 
@@ -79,8 +79,8 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
       .append("g")
       .attr("class", "bubble")
       .attr("transform", function(d){ return "translate("+d.x+","+d.y+")" ;})
+      .join("#content")
       ;
-      
       
 
       bubbles.append("circle")
@@ -90,15 +90,23 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
       .transition().duration(500)
       .style("fill", function(d,i){ 
         return self.color_scale(d.r); 
-      })                
+      })
+                   
       ; 
       bubbles.append("text")
       .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "top")
-      .text(function(d){ return d.data.name ; })
-      .style("font-size", "12pt")
-      .attr("font-weight", "bold")
+      .attr("dominant-baseline", "text-after-edge")
+      .text(function(d){ return d.data.name })
+      .style("font-size", "20pt")
       ;
+
+      bubbles.append("text")
+      .attr("dominant-baseline", "text-before-edge")
+      .text(function(d){ return d.data.val })
+      .style("font-size", "20pt")
+      ;
+
+      
       
     }
   }
