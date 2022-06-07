@@ -1,114 +1,113 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/power.csv")
 .then(data=>{
+
   data.forEach( d => { d.val = +d.val;});
 
   var config = {
     parent: '#content',
-    width: 3000,
-    height: 3000,
-    margin: {top:10, right:10, bottom:20, left:20}
+    width: 1000,
+    height: 1000,
+    margin: {top:300, right:50, bottom:50, left:50}
 };
 
-  const Bubble_Chart = new BubbleChart( config, data );
-  Bubble_Chart.update();
+  const Rader_Chart = new RaderChart( config, data );
+  Rader_Chart.update();
 
 })
-  
 
-  class BubbleChart{
+class RaderChart{
     constructor(config,data){
-      this.config = {
-        parent: config.parent,
-        width: config.width || 256,
-        height: config.height || 128,
-        margin: config.margin || {top:10, right:10, bottom:20, left:60}
-    }
-    this.data = data;
-    
-    this.init();
-    }
+        this.config = {
+            parent: config.parent,
+            width: config.width || 256,
+            height: config.height || 128,
+            margin: config.margin || {top:50, right:10, bottom:20, left:60}
+        }
+        this.data = data;
 
+        this.init();
+    }
     init(){
-      let self=this;
-      self.data_set = {children:[ ]
-      };
+        let self=this;
 
-      for(self.i=0;self.i<self.data.length;self.i++){
-        self.data_set.children.push(self.data[self.i])
-    }
-
-    self.bubble = d3.pack()
-    .size([self.config.width, self.config.height])
-    .padding(1.5) ;
-
-    self.nodes = d3.hierarchy( self.data_set )
-    .sum(d=>d.val);
-
-    }
-
-    update(){
-      let self = this;
-
-     self.bubble_data = self.bubble(self.nodes).descendants() ;
-     
-    //
-    self.no_root_bubble = self.bubble_data.filter( function(d){ return d.parent != null ;} ) ;
-   // console.log(self.no_root_bubble)
-    
-    var max_val = d3.max(self.no_root_bubble, function(d){ return d.r ;});     
-    var min_val = d3.min(self.no_root_bubble, function(d){return d.r ; });
-
-  self.color_scale = d3.scaleLinear()
-  .domain( [min_val, max_val] )
-  .range(d3.schemeCategory10 );
-
-
-  var font_scale = d3.scaleLinear()
-  .domain([min_val, max_val])
-  .range([9, 28]);
-    
-  self.render();
-  }
-    render(){
-      let self = this;
-
-      var bubbles = d3.select("#content")
-      .selectAll(".bubble")
-      .data(self.no_root_bubble)
-      .enter()
-      .append("g")
-      .attr("class", "bubble")
-      .attr("transform", function(d){ return "translate("+d.x+","+d.y+")" ;})
-      .join("#content")
-      ;
-      
-
-      bubbles.append("circle")
-      .transition().duration(500)
-      .delay((d,i)=>i*100) 
-      .attr("r", function(d){ return d.r })
-      .transition().duration(500)
-      .style("fill", function(d,i){ 
-        return self.color_scale(d.r); 
-      })
-                   
-      ; 
-      bubbles.append("text")
-      .attr("text-anchor", "middle")
-      .attr("dominant-baseline", "text-after-edge")
-      .text(function(d){ return d.data.name })
-      .style("font-size", "20pt")
-      ;
-
-      bubbles.append("text")
-      .attr("dominant-baseline", "text-before-edge")
-      .text(function(d){ return d.data.val })
-      .style("font-size", "20pt")
-      ;
-
-      
-      
-    }
-  }
-
+        self.grid = [
+            [1,1,1,1,1,1],[2,2,2,2,2,2],[3,3,3,3,3,3],[4,4,4,4,4,4],[5,5,5,5,5,5]
+        ];
   
+        self.dataarr=[]
+        for(self.i=0;self.i<self.data.length;self.i++){
+        self.dataarr.push(self.data[self.i].val)}
+
+        self.stage = d3.select("#demo_stage");
+        self.svg = self.stage.append("svg")
+        .attr("width",500)
+        .attr("height",500);
+        
+        self.scale = d3.scaleLinear()
+        .domain([0,6]).range([0,150]);
+
+        self.line = d3.line()
+        .x(function(d,i){return self.scale(d) * Math.sin(Math.PI*2/6 * i) + 200;})
+        .y(function(d,i){return self.scale(d) * Math.cos(Math.PI*2/6 * i) + 200;})
+
+      }
+      update(){
+        let self = this;
+  
+       
+      
+    self.render();
+    }
+
+    render(){
+        let self = this;
+
+        self.svg.selectAll("path.grid")
+        .data(self.grid)
+        .enter()
+        .append("path")
+        .attr("d", function(d,i){return self.line(d)+"z";})
+        .attr("stroke", "black")
+        .attr("stroke-dasharray", "2");
+
+
+        self.svg.selectAll("path.data")
+        .data(self.dataarr)
+        .enter()
+        .append("path")
+        .attr("d", function(d){return self.line(self.dataarr)+"z";}) 
+        .transition()
+        .duration(750)
+        .attr("stroke", function(d){return "red";})
+        .attr("stroke-width", 2)
+        ;
+
+        self.svg.selectAll("path.grid")
+        .animmate({
+            top: '100px',
+            opacity: 0
+          },
+          1500,
+          'linear',
+          function() {
+            console.log('アニメーションが終了しました');
+          })
+        self.svg.selectAll("path").attr("fill", "none")
+        
+
+        
+        
+      //  console.log(self.scale(self.dataarr))
+       
+        self.svg.selectAll("text")  
+        .data(self.data)
+        .enter()
+        .append("text")
+        .text(function(d, i){ return i+1; })
+        .attr("x", function(d,i){return 150 * Math.sin(Math.PI*2/6 * i) + 200;})
+        .attr("y", function(d,i){return 150 * Math.cos(Math.PI*2/6 * i) + 200;});
+
+    }
+     
+    
+}
