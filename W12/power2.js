@@ -1,4 +1,4 @@
-d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/power.csv")
+d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/Hpower.csv")
 .then(data=>{
 
   data.forEach( d => { d.val = +d.val;});
@@ -82,16 +82,6 @@ class RaderChart{
         .attr("stroke-width", 2)
         ;
 
-        self.svg.selectAll("path.grid")
-        .animmate({
-            top: '100px',
-            opacity: 0
-          },
-          1500,
-          'linear',
-          function() {
-            console.log('アニメーションが終了しました');
-          })
         self.svg.selectAll("path").attr("fill", "none")
         
 
@@ -103,7 +93,7 @@ class RaderChart{
         .data(self.data)
         .enter()
         .append("text")
-        .text(function(d, i){ return i+1; })
+        .text(function(d, i){ return d.name; })
         .attr("x", function(d,i){return 150 * Math.sin(Math.PI*2/6 * i) + 200;})
         .attr("y", function(d,i){return 150 * Math.cos(Math.PI*2/6 * i) + 200;});
 
