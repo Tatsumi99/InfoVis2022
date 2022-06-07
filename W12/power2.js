@@ -31,7 +31,7 @@ class RaderChart{
         let self=this;
 
         self.grid = [
-            [1,1,1,1,1,1],[2,2,2,2,2,2],[3,3,3,3,3,3],[4,4,4,4,4,4],[5,5,5,5,5,5]
+            [30,30,30,30,30,30],[60,60,60,60,60,60],[90,90,90,90,90,90],[120,120,120,120,120,120],[150,150,150,150,150,150]
         ];
   
         self.dataarr=[]
@@ -44,7 +44,7 @@ class RaderChart{
         .attr("height",500);
         
         self.scale = d3.scaleLinear()
-        .domain([0,6]).range([0,150]);
+        .domain([0,6]).range([0,5]);
 
         self.line = d3.line()
         .x(function(d,i){return self.scale(d) * Math.sin(Math.PI*2/6 * i) + 200;})
@@ -78,7 +78,7 @@ class RaderChart{
         .attr("d", function(d){return self.line(self.dataarr)+"z";}) 
         .transition()
         .duration(750)
-        .attr("stroke", function(d){return "red";})
+        .attr("stroke", function(d){return "skyblue";})
         .attr("stroke-width", 2)
         ;
 
@@ -93,10 +93,24 @@ class RaderChart{
         .data(self.data)
         .enter()
         .append("text")
+        .attr("font-weight", "bold")
         .text(function(d, i){ return d.name; })
-        .attr("x", function(d,i){return 150 * Math.sin(Math.PI*2/6 * i) + 200;})
-        .attr("y", function(d,i){return 150 * Math.cos(Math.PI*2/6 * i) + 200;});
+        .transition()
+        .duration(1000)
+        .attr("x", function(d,i){return 150 * Math.sin(Math.PI*2/6 * i) + 170;})
+        .attr("y", function(d,i){return 150 * Math.cos(Math.PI*2/6 * i) + 200;})
+        ;
 
+        for(self.i=1;self.i<=5;self.i++){
+        self.svg
+        .append("text")
+        .text(self.i*30)
+        .transition()
+        .delay(1000)
+        .duration(1000)
+        .attr("x",200)
+        .attr("y",175-25*(self.i-1));
+        }
     }
      
     
