@@ -42,7 +42,7 @@ class BarChart {
             self.inner_height = self.config.height - self.config.margin.top - self.config.margin.bottom;
     
             self.xscale = d3.scaleLinear()
-             .domain([0, d3.max(self.data, d => d.Height)])
+             .domain([0, -950+d3.max(self.data, d => d.Height)])
              .range([0, self.inner_width]);
     
             self.yscale = d3.scaleBand()
@@ -55,7 +55,7 @@ class BarChart {
             .ticks(5)
             .tickSizeOuter(0);
 
-            self.yaxis = d3.axisRight(self.yscale )
+            self.yaxis = d3.axisLeft(self.yscale )
             .ticks(5)
             .tickSizeOuter(0);
 
