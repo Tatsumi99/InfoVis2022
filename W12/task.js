@@ -51,7 +51,7 @@ class BarChart {
             
     
             // Initialize axes
-            self.xaxis = d3.axisBottom( self.xscale )
+            self.xaxis = d3.axisTop( self.xscale )
             .ticks(5)
             .tickSizeOuter(0);
 
