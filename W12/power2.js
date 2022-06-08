@@ -47,8 +47,8 @@ class RaderChart{
         .domain([0,6]).range([0,5]);
 
         self.line = d3.line()
-        .x(function(d,i){return self.scale(d) * Math.sin(Math.PI*2/6 * i) + 200;})
-        .y(function(d,i){return self.scale(d) * Math.cos(Math.PI*2/6 * i) + 200;})
+        .x((d,i)=>self.scale(d) * Math.sin(Math.PI*2/6 * i) + 200)
+        .y((d,i)=> self.scale(d) * Math.cos(Math.PI*2/6 * i) + 200)
 
       }
       update(){
@@ -66,7 +66,7 @@ class RaderChart{
         .data(self.grid)
         .enter()
         .append("path")
-        .attr("d", function(d,i){return self.line(d)+"z";})
+        .attr("d", (d,i)=> self.line(d)+"z")
         .attr("stroke", "black")
         .attr("stroke-dasharray", "2");
 
@@ -75,10 +75,10 @@ class RaderChart{
         .data(self.dataarr)
         .enter()
         .append("path")
-        .attr("d", function(d){return self.line(self.dataarr)+"z";}) 
+        .attr("d", (d)=> self.line(self.dataarr)+"z") 
         .transition()
         .duration(750)
-        .attr("stroke", function(d){return "skyblue";})
+        .attr("stroke", d=> "skyblue")
         .attr("stroke-width", 2)
         ;
 
@@ -94,11 +94,11 @@ class RaderChart{
         .enter()
         .append("text")
         .attr("font-weight", "bold")
-        .text(function(d, i){ return d.name; })
+        .text((d, i) => d.name)
         .transition()
         .duration(1000)
-        .attr("x", function(d,i){return 150 * Math.sin(Math.PI*2/6 * i) + 170;})
-        .attr("y", function(d,i){return 150 * Math.cos(Math.PI*2/6 * i) + 200;})
+        .attr("x", (d,i)=> 150 * Math.sin(Math.PI*2/6 * i) + 170)
+        .attr("y", (d,i)=> 150 * Math.cos(Math.PI*2/6 * i) + 200)
         ;
 
         for(self.i=1;self.i<=5;self.i++){

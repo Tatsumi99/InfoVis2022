@@ -100,6 +100,7 @@ class BarChart {
             .attr("x", 0)
             .attr("y", d => self.yscale(d.name))
             .attr("width",  d => self.xscale(d.Weight))
+            .attr("fill","skyblue")
             .attr("height", self.yscale.bandwidth());
 
         d3.select('#reverse')

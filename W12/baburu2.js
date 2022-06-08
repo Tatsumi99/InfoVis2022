@@ -52,11 +52,11 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
      self.bubble_data = self.bubble(self.nodes).descendants() ;
      
     //
-    self.no_root_bubble = self.bubble_data.filter( function(d){ return d.parent != null ;} ) ;
+    self.no_root_bubble = self.bubble_data.filter(d=> d.parent != null ) ;
    // console.log(self.no_root_bubble)
     
-    var max_val = d3.max(self.no_root_bubble, function(d){ return d.r ;});     
-    var min_val = d3.min(self.no_root_bubble, function(d){return d.r ; });
+    var max_val = d3.max(self.no_root_bubble, d=> d.r);     
+    var min_val = d3.min(self.no_root_bubble, d=>d.r);
 
   self.color_scale = d3.scaleLinear()
   .domain( [min_val, max_val] )
@@ -78,7 +78,7 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
       .enter()
       .append("g")
       .attr("class", "bubble")
-      .attr("transform", function(d){ return "translate("+d.x+","+d.y+")" ;})
+      .attr("transform", d=>"translate("+d.x+","+d.y+")")
       .join("#content")
       ;
       
@@ -86,23 +86,20 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/publisher.csv")
       bubbles.append("circle")
       .transition().duration(500)
       .delay((d,i)=>i*100) 
-      .attr("r", function(d){ return d.r })
+      .attr("r", d=> d.r)
       .transition().duration(500)
-      .style("fill", function(d,i){ 
-        return self.color_scale(d.r); 
-      })
-                   
+      .style("fill", (d,i)=>self.color_scale(d.r))                   
       ; 
       bubbles.append("text")
       .attr("text-anchor", "middle")
       .attr("dominant-baseline", "text-after-edge")
-      .text(function(d){ return d.data.name })
+      .text(d=> d.data.name)
       .style("font-size", "20pt")
       ;
 
       bubbles.append("text")
       .attr("dominant-baseline", "text-before-edge")
-      .text(function(d){ return d.data.val })
+      .text(d=> d.data.val)
       .style("font-size", "20pt")
       ;
 
