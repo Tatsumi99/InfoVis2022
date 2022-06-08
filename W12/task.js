@@ -55,7 +55,7 @@ class BarChart {
             .ticks(5)
             .tickSizeOuter(0);
 
-            self.yaxis = d3.axisLeft( self.yscale )
+            self.yaxis = d3.axisRight(self.yscale )
             .ticks(5)
             .tickSizeOuter(0);
 
