@@ -6,7 +6,7 @@ d3.csv("https://tatsumi99.github.io/InfoVis2022/W12/Book2.csv")
             parent: '#drawing_region',
             width: 512,
             height: 10000,
-            margin: {top:10, right:10, bottom:20, left:100}
+            margin: {top:40, right:10, bottom:20, left:100}
         };
 
         const Barplot = new BarChart( config, data );
@@ -51,7 +51,7 @@ class BarChart {
             
     
             // Initialize axes
-            self.xaxis = d3.axisBottom( self.xscale )
+            self.xaxis = d3.axisTop( self.xscale )
             .ticks(5)
             .tickSizeOuter(0);
 
@@ -86,8 +86,9 @@ class BarChart {
         let self = this;
 
         self.xaxis_group = self.chart.append('g')
-        .attr('transform', `translate(0, ${self.inner_height})`)
+        .attr('transform', `translate(0, 0)`)
         .call(self.xaxis);
+        
 
         self.yaxis_group = self.chart.append('g')
         .call(self.yaxis);
